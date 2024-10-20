@@ -1,0 +1,10 @@
+rule ExampleRule {
+    meta:
+        author = "Author Name"
+        description = "Detects malware XYZ"
+    strings:
+        $str1 = "malicious_string"
+        $str2 = {A1 B2 C3 D4}
+    condition:
+        $str1 or $str2
+}
